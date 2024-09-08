@@ -1,0 +1,102 @@
+body{
+    margin:0px;
+    padding:0px;
+    background-color:whitesmoke;
+}
+#main{
+    background-color: white;
+    margin: 0px 20px;
+}
+#heading{
+    font-family:"Lobster";
+    font-size: xx-large;
+    text-align: center;
+}
+ul {
+    background-color: black;
+    padding: 10px;
+    margin: 0;
+}
+
+ul > li {
+    display: inline-block;
+    padding: 10px;
+    list-style: none;
+}
+
+li > a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+#left_content,#rightrow1,#rightrow2{
+    margin:10px;  
+    border: 2px solid black;
+    padding:20px;
+}
+#left_content>h2,#rightrow1>h2,#rightrow2>h2{
+   font-size:xx-large;
+}
+#left_content>p,#rightrow1>p,#rightrow2>p{
+    font-size: large;
+}
+
+
+@media only screen and (min-width: 641px) {
+    #main {
+        display: grid;
+        grid-template-areas:
+            "head head"
+            "nav nav"
+            "content1 content2";
+        grid-template-rows: 2% 8% 90%;
+        grid-template-columns: 30% 70%;
+        grid-gap: 10px;
+    }
+
+    #heading {
+        grid-area: head;
+    }
+
+    #navigation {
+        grid-area: nav;
+    }
+
+    #left_content {
+        grid-area: content1;
+    }
+
+    #right_content {
+        grid-area: content2;
+    }
+}
+
+@media only screen and (min-width: 841px) {
+    #main {
+        display: grid;
+        grid-template-areas:
+            "head head"
+            "nav nav"
+            "content1 content2";
+        grid-template-rows: 2% 10% 88%;
+        grid-template-columns: 35% 65%;
+        grid-gap: 10px;
+    }
+
+    #heading {
+        grid-area: head;
+    }
+
+    #navigation {
+        grid-area: nav;
+    }
+
+    #left_content {
+        grid-area: content1;
+    }
+
+    #right_content {
+        grid-area: content2;
+    }
+}
